@@ -13,7 +13,7 @@ public class Score : MonoBehaviour
     public Text distancePanelText;
 
     public GameObject scorePanel;
-
+    public GameObject highscorePanel;
     public GameObject mainPanel;
     public Text[] texts = new Text[5];
     public Text score1, score2, score3, score4, score5;
@@ -40,11 +40,11 @@ public class Score : MonoBehaviour
 
         texts[4] = score1; texts[3] = score2; texts[2] = score3; texts[1] = score4; texts[0] = score5;
         for (int i = 0; i < 5; i++) {
-            if (PlayerPrefs.GetInt("hsInt" + (i + 1.ToString())) == 0) {
+            if (PlayerPrefs.GetInt("hsInt1" + (i + 1.ToString())) == 0) {
                 scores.Add(new ScoreH { total = 0, distance = 0, gem = 0, date = System.DateTime.Now.ToString() });
             } else {
-                scores.Add(new ScoreH { total = PlayerPrefs.GetInt("hsInt" + (i + 1.ToString())),
-                 distance = 0, gem = 0, date = PlayerPrefs.GetString("hsDate" + (i + 1.ToString())) });
+                scores.Add(new ScoreH { total = PlayerPrefs.GetInt("hsInt1" + (i + 1.ToString())),
+                 distance = 0, gem = 0, date = PlayerPrefs.GetString("hsDate1" + (i + 1.ToString())) });
             }
         }
 
@@ -56,7 +56,7 @@ public class Score : MonoBehaviour
     void Update()
     {
 
-        if (player.position.z > 1 && (scorePanel.activeSelf == false) && (mainPanel.activeSelf == false)) {
+        if (player.position.z > 1 && (scorePanel.activeSelf == false) && (mainPanel.activeSelf == false) && (highscorePanel.activeSelf == false)) {
             distanceText.text = ((int)player.position.z).ToString();
         }
 
@@ -102,6 +102,8 @@ public class Score : MonoBehaviour
             scores[0].date = System.DateTime.Now.ToString();
             scores.Sort(SortByScore);
             AssignScores();
+            gemScore = 0;
+            finalScore = 0;
         }
 
     }
@@ -109,12 +111,12 @@ public class Score : MonoBehaviour
     public void AssignScores() {
         //attach scores to the highscore button textfields
         for (int i = 0; i < 5; i++) {
-            PlayerPrefs.SetString("hs" + (i + 1.ToString()), "Total: " +
+            PlayerPrefs.SetString("hs1" + (i + 1.ToString()), "Total: " +
              scores[i].total.ToString() + "      " + "Date: " + scores[i].date);
 
-            PlayerPrefs.SetString("hsDate" + (i + 1.ToString()), scores[i].date);
-            PlayerPrefs.SetInt("hsInt" + (i + 1.ToString()), scores[i].total);
-            texts[i].text = PlayerPrefs.GetString("hs" + (i + 1.ToString()));
+            PlayerPrefs.SetString("hsDate1" + (i + 1.ToString()), scores[i].date);
+            PlayerPrefs.SetInt("hsInt1" + (i + 1.ToString()), scores[i].total);
+            texts[i].text = PlayerPrefs.GetString("hs1" + (i + 1.ToString()));
             //texts[i].text = "Total: " + scores[i].total.ToString() + "      " + "Date: " + scores[i].date;
         }
     }

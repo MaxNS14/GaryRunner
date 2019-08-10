@@ -24,13 +24,13 @@ public class PlayerMovement : MonoBehaviour
         player.transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
         if (Input.GetKey("d"))
         {
-            player.transform.Translate(Vector3.right*0.1f);
+            //player.transform.Translate(Vector3.right*0.1f);
             player.AddForce(50, 0, 0);
         }
 
         if (Input.GetKey("a"))
         {
-            player.transform.Translate(Vector3.left*0.1f);
+            //player.transform.Translate(Vector3.left*0.1f);
             player.AddForce(-50, 0, 0);
         }
 

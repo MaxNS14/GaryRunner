@@ -53,9 +53,9 @@ public class GenerateBlocks : MonoBehaviour {
 
     //really need to fix up gem/powerup spawner but will do once submit game, time constricted D:
     void BlockSpawn() {
-        for (int x = 5; x < 1300; x++) {
+        for (int x = 5; x < 1000; x++) {
 
-            randomSelectah = Random.Range(1, 1300);
+            randomSelectah = Random.Range(1, 1000);
             if (randomSelectah < 20) {
                 GenerateGem(x);
             } else if (randomSelectah >= 20 && randomSelectah < 30) {
@@ -79,7 +79,7 @@ public class GenerateBlocks : MonoBehaviour {
                     GenerateMultiple(x, 7, "Enemy/Enemy", "Enemy/MovingEnemy");
                 else if ((x >= 700) && (x <= 800))
                     GenerateBlock(x, "Enemy/OpaqueEnemy", 6);
-                else if ((x >= 800) && (x <= 9000))
+                else if ((x >= 800) && (x <= 900))
                     GenerateMultiple(x, 7, "Enemy/OpaqueEnemy", "Enemy/MovingEnemy");
                 else if ((x >= 900) && (x <= 1000))
                     GenerateMultiple(x, 7, "Enemy/Enemy", "Enemy/MovingOpaque");
@@ -103,7 +103,7 @@ public class GenerateBlocks : MonoBehaviour {
     }
 
     void GenerateGround() {
-        for (int x = 0; x <= 110; x++) {
+        for (int x = 0; x <= 100; x++) {
             if (x < 50)
                 GenerateGround(x, "Ground/Ground");
             else if (x >= 50)

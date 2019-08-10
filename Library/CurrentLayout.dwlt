@@ -265,13 +265,13 @@ MonoBehaviour:
     height: 546
   m_MinSize: {x: 204, y: 224}
   m_MaxSize: {x: 4004, y: 4024}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,19 +336,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/alexmorton/Desktop/max's stuff/FlickItRepo/NewProjectWow
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 2}
-    m_SelectedIDs: ce280000
-    m_LastClickedID: 10446
+    m_SelectedIDs: ac290000
+    m_LastClickedID: 10668
     m_ExpandedIDs: 0000000042270000e8280000622a0000c02a0000e42a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -498,21 +498,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e47af6fffe7af6ff087bf6ff4a7bf6ff647bf6ffa07cf6ff5687f6ffd4fbffffba2c0000142d0000
+      m_ExpandedIDs: 4814f7ff6414f7ff6e14f7ff6e15f7ff8a15f7ffc816f7ff1ad3f7ff36d3f7ff74d4f7ff145dfdff2e5dfdff6c5efdff1efbffff2cfbffff3afbffff48fbffff5efbffff76fbffffd4fbffff822d0000a42d0000a83c0000f0530000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Player
-        m_OriginalName: Player
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 23432
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -554,9 +554,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 1, z: 1}
+    m_Target: {x: 452.5, y: 254.5, z: 0}
     speed: 2
-    m_Value: {x: 0, y: 1, z: 1}
+    m_Value: {x: 452.5, y: 254.5, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -588,9 +588,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.10779022, y: 0.00000013298042, z: 0.000000007725403, w: 0.9941737}
   m_Size:
-    m_Target: 2.8578837
+    m_Target: 745.26843
     speed: 2
-    m_Value: 2.8578837
+    m_Value: 745.26843
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -650,7 +650,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
